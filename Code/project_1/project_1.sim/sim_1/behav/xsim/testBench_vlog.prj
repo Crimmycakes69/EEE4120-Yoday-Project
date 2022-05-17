@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/audio_sampling.v" \
+"../../../../project_1.srcs/sources_1/new/mean.v" \
+"../../../../../../../Prac3/Prac3.2/Prac3_2_Code/prac3_2_code.srcs/sources_1/new/sine_gen.v" \
+"../../../../project_1.srcs/sources_1/new/std.v" \
+"../../../../project_1.srcs/sources_1/imports/new/testBench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
