@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Wed May 18 13:07:09 2022
+# Process ID: 18720
+# Current directory: C:/Users/chris/OneDrive/Documents/_University/4_Fourth Year 2022/Semester 1/EEE4120F/Practicals/Prac3/Prac3.2/Prac3_2_Code/YODA_MinMax/YODA_MinMax.runs/synth_1
+# Command line: vivado.exe -log Mean.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Mean.tcl
+# Log file: C:/Users/chris/OneDrive/Documents/_University/4_Fourth Year 2022/Semester 1/EEE4120F/Practicals/Prac3/Prac3.2/Prac3_2_Code/YODA_MinMax/YODA_MinMax.runs/synth_1/Mean.vds
+# Journal file: C:/Users/chris/OneDrive/Documents/_University/4_Fourth Year 2022/Semester 1/EEE4120F/Practicals/Prac3/Prac3.2/Prac3_2_Code/YODA_MinMax/YODA_MinMax.runs/synth_1\vivado.jou
+# Running On: CBSima, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 68079 MB
+#-----------------------------------------------------------
+source Mean.tcl -notrace

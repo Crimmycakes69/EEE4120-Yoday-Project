@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1652899215">
+  <File Type="PA-TCL" Name="Mean.tcl"/>
+  <File Type="REPORTS-TCL" Name="Mean_reports.tcl"/>
+  <File Type="BITSTR-MSK" Name="Mean.msk"/>
+  <File Type="RDI-RDI" Name="Mean.vdi"/>
+  <File Type="BG-BIT" Name="Mean.bit"/>
+  <File Type="BG-DRC" Name="Mean.drc"/>
+  <File Type="BG-BGN" Name="Mean.bgn"/>
+  <File Type="BG-BIN" Name="Mean.bin"/>
+  <File Type="BITSTR-RBT" Name="Mean.rbt"/>
+  <File Type="BITSTR-NKY" Name="Mean.nky"/>
+  <File Type="BITSTR-BMM" Name="Mean_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="Mean.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="Mean.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Mean.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-HWDEF" Name="Mean.hwdef"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Mean_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DCP" Name="Mean_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Mean_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Mean_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMING-PB" Name="Mean_timing_summary_routed.pb"/>
+  <File Type="OPT-DCP" Name="Mean_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="Mean_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="Mean_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Mean_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="Mean_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Mean_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Mean_postroute_physopt_bb.dcp"/>
+  <File Type="PDI-FILE" Name="Mean.pdi"/>
+  <File Type="RCFI_FILE" Name="Mean.rcfi"/>
+  <File Type="CFI_FILE" Name="Mean.cfi"/>
+  <File Type="RNPI_FILE" Name="Mean.rnpi"/>
+  <File Type="NPI_FILE" Name="Mean.npi"/>
+  <File Type="RBD_FILE" Name="Mean.rbd"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/Mean.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MinMax.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/STDDev.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/sine_gen.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Max"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Downloads/Nexys-A7-100T-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Downloads/Nexys-A7-100T-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1652873547"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
