@@ -20,38 +20,25 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Mean(clk, out);
+module Mean(Reset, InData, average);
 
-input clk;
-////input [15:0] Sample;
-//output reg [15:0] mean;
-output reg [31:0] out;
+input Reset;
+input [15:0] InData;
+output reg [15:0] average;
 
-//parameter SIZE = 1024;              //the size of the array of sine signals
-//reg [15:0] rom_memory [SIZE-1:0];   //the array where the sine signals are stored. This is the data acessed in the code
-//integer i, sum,x_value, count;      //i is used to access array elements, x_values is the current array element, count is the number of elements that have been acessed
+
 integer count;
+integer sum;
 
 initial begin                       //initial block, run once
-//    $readmemh("sine_LUT_values.mem", rom_memory);   //could use IP of BRAM instead of this command
-//    i = 0;                                          //initialise to 0 to access first element in array
-//    mean=0;                                         //set mean to zero, will change during simulation
-//    sum=0;                                          //set sum to zero, will increase using cumulative addition
-//    x_value=0;                                      //set to zero in begining, will take on array element values during each clock cycle
-//    count=1;
-                                        //number of elements accessed, used as N in mean and std formula, increased during each clock cycle
+count = 0;
+sum = 0;
 end
 
-always@(posedge clk) begin                          //repeats at each clock cycle on positive rise
-//    x_value = rom_memory[i];                        //set x_value of array element
-//    sum = sum + x_value;                            //cumulative addition of x_value
-
-//    if(i == SIZE)
-    
-//    i = i+ 1;                                       //increment the counter for the next cycle     
-//    count=count+1;                                  //increment no of accessed elements during each clock cycle
-     
-//mean=sum/count;                                     //finally, calculate the mean of a set of data
+always@(posedge Reset) begin                          //repeats at each clock cycle on positive rise
+    count = count + 1;
+    sum = sum + InData;
+    average = sum/count;                         // calculate and set average of a set of data
 end
 
 endmodule
